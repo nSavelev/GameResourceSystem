@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccb9789897242ffbf9ee56c4309fb9c, type: 3}
+  m_Name: UIGameResources
+  m_EditorClassIdentifier: 
+  _defaultResourceIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  _resourceIcons:
+  - ResourceId: Stone
+    Icon: {fileID: -5694085736044283649, guid: 9127a32cfe3cc0544815a999ee0a7bd3, type: 3}
+  - ResourceId: Wood
+    Icon: {fileID: 7639632697525251107, guid: 9127a32cfe3cc0544815a999ee0a7bd3, type: 3}
+  - ResourceId: Iron
+    Icon: {fileID: -355526233981419803, guid: 9127a32cfe3cc0544815a999ee0a7bd3, type: 3}
+  - ResourceId: Gold
+    Icon: {fileID: 2158920311660660605, guid: 9127a32cfe3cc0544815a999ee0a7bd3, type: 3}

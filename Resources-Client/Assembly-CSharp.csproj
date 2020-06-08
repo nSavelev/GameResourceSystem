@@ -31,6 +31,7 @@
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningsAsErrors></WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +42,7 @@
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningsAsErrors></WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -58,7 +60,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Initialization\Initialization.cs" />
+     <Compile Include="Assets\Scripts\Services\GameResources\GameResourcesService.cs" />
+     <Compile Include="Assets\Scripts\Services\IGameResourceService.cs" />
+     <Compile Include="Assets\Scripts\Services\IServices.cs" />
+     <Compile Include="Assets\Scripts\Services\Network\INetService.cs" />
+     <Compile Include="Assets\Scripts\Services\Network\NetService.cs" />
+     <Compile Include="Assets\Scripts\Services\ServicesContainer.cs" />
+     <Compile Include="Assets\Scripts\Services\UIService\BaseAbstractView.cs" />
+     <Compile Include="Assets\Scripts\Services\UIService\GenericAbstractView.cs" />
+     <Compile Include="Assets\Scripts\Services\UIService\IModel.cs" />
+     <Compile Include="Assets\Scripts\Services\UIService\IUiService.cs" />
+     <Compile Include="Assets\Scripts\Services\UIService\IView.cs" />
+     <Compile Include="Assets\Scripts\Services\UIService\UiService.cs" />
+     <Compile Include="Assets\Scripts\TempLogic\TempGameResourcesData.cs" />
      <Compile Include="Assets\Scripts\TempLogic\TempNetwork.cs" />
+     <Compile Include="Assets\Scripts\UI\Models\ResourcesModel.cs" />
+     <Compile Include="Assets\Scripts\UI\UIData\GameResourcesUiData.cs" />
+     <Compile Include="Assets\Scripts\UI\Views\Items\ResourceItemView.cs" />
+     <Compile Include="Assets\Scripts\UI\Views\Items\StupidProgressBar.cs" />
+     <Compile Include="Assets\Scripts\UI\Views\ResourcesView.cs" />
+     <None Include="Assets\csc.rsp" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -85,6 +107,9 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -610,29 +635,29 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Network.csproj">
+      <Project>{57141015-E2A7-DEE6-5677-9DF0B53D947F}</Project>
+      <Name>Network</Name>
+    </ProjectReference>
     <ProjectReference Include="UniRx.csproj">
       <Project>{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}</Project>
       <Name>UniRx</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameResources.csproj">
-      <Project>{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}</Project>
-      <Name>GameResources</Name>
-    </ProjectReference>
-    <ProjectReference Include="EditMoteTests.csproj">
-      <Project>{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}</Project>
-      <Name>EditMoteTests</Name>
     </ProjectReference>
     <ProjectReference Include="GameData.csproj">
       <Project>{93C934DE-59D1-9D93-86CF-D716EA64F8A7}</Project>
       <Name>GameData</Name>
     </ProjectReference>
-    <ProjectReference Include="Network.csproj">
-      <Project>{57141015-E2A7-DEE6-5677-9DF0B53D947F}</Project>
-      <Name>Network</Name>
+    <ProjectReference Include="GameResources.csproj">
+      <Project>{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}</Project>
+      <Name>GameResources</Name>
     </ProjectReference>
     <ProjectReference Include="Protocol.csproj">
       <Project>{6A3CD2C1-3C78-4DF8-22EA-06F2AFF3E4B2}</Project>
       <Name>Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="EditMoteTests.csproj">
+      <Project>{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}</Project>
+      <Name>EditMoteTests</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

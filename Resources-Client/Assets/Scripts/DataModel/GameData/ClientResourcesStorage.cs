@@ -48,6 +48,10 @@ namespace DataModel.GameData
 
         public void Receive(ResourceId id, int amount)
         {
+            if (amount < 0)
+            {
+                throw new Exception("Trying to receive negative amount");
+            }
             if (!_resourceAmounts.TryGetValue(id, out var currentAmount))
             {
                  _resourceAmounts[id] = currentAmount = new ReactiveProperty<int>();
@@ -59,7 +63,8 @@ namespace DataModel.GameData
                 var limitValue = limit.Value;
                 if (limitValue.HasValue)
                 {
-                    amount = Mathf.Clamp(amount, 0, limitValue.Value - currentAmount.Value);
+                    currentAmount.Value = Mathf.Clamp(currentAmount.Value + amount, 0, limitValue.Value);
+                    return;
                 }
             }
 
@@ -68,6 +73,10 @@ namespace DataModel.GameData
 
         public bool TrySpend(ResourceId id, int amount)
         {
+            if (amount < 0)
+            {
+                throw new Exception("Trying to spend negative amount");
+            }
             if (_resourceAmounts.TryGetValue(id, out var currentAmount))
             {
                 if (currentAmount.Value >= amount)
@@ -90,6 +99,15 @@ namespace DataModel.GameData
                 _resourceAmounts[id] = currentAmount = new ReactiveProperty<int>();
                 _resourceIds.Add(id);
             }
+
+            if (_resourceLimits.TryGetValue(id, out var limit))
+            {
+                var limitValue = limit.Value;
+                if (limitValue.HasValue)
+                {
+                    amount = Mathf.Clamp(amount, 0, limitValue.Value);
+                }
+            }
             currentAmount.Value = amount;
         }
 
@@ -99,13 +117,14 @@ namespace DataModel.GameData
             {
                 _resourceLimits[id] = currentLimit = new ReactiveProperty<int?>();
             }
-            // Clamp resource count if limit decreased (or if setted from unlimited)
-            if (currentLimit.Value > limit || (!currentLimit.Value.HasValue && limit.HasValue))
+            if (!_resourceAmounts.TryGetValue(id, out var amount))
             {
-                if (_resourceAmounts.TryGetValue(id, out var amount))
-                {
-                    amount.Value = Mathf.Clamp(amount.Value, 0, limit.Value);
-                }
+                _resourceAmounts.Add(id, amount = new ReactiveProperty<int>(0));
+            }
+            // Clamp resource count if limit decreased (or if setted from unlimited)
+            if (amount.Value > limit || currentLimit.Value > limit || (!currentLimit.Value.HasValue && limit.HasValue))
+            {
+                amount.Value = Mathf.Clamp(amount.Value, 0, limit.Value);
             }
             currentLimit.Value = limit;
         }

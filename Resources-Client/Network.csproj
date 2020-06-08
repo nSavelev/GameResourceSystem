@@ -31,6 +31,7 @@
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningsAsErrors></WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +42,7 @@
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningsAsErrors></WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -60,6 +62,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Network\INetMessage.cs" />
      <Compile Include="Assets\Scripts\Network\INetMessageBus.cs" />
+     <Compile Include="Assets\Scripts\Network\INetSender.cs" />
+     <Compile Include="Assets\Scripts\Network\INetwork.cs" />
      <None Include="Assets\Scripts\Network\Network.asmdef" />
  <Reference Include="UnityEditor.UI">
  <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

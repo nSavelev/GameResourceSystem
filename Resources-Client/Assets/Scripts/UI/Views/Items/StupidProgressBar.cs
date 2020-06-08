@@ -6,7 +6,7 @@ namespace UI.Views.Items
     public class StupidProgressBar : MonoBehaviour
     {
         [SerializeField]
-        private Image _progress;
+        private Image _progress = null;
 
         public void SetValue(float value)
         {

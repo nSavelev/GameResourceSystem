@@ -1,8 +1,9 @@
-﻿using DataModel.GameResources;
+﻿using System;
+using DataModel.GameResources;
 
 namespace Services
 {
-    public interface IGameResourceService
+    public interface IGameResourceService : IDisposable
     {
         IResourceStorage ResourceStorage { get; }
         IClientResourceOperations ClientResourceOperations { get; }

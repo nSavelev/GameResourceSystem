@@ -78,6 +78,7 @@ namespace Tests.EditModeTests
             // Remove limit
             _serverResourceOperations.SetLimit(Resource1, null);
             Assert.AreEqual(r1Amount.Value, 100);
+
             _clientResourceOperations.Receive(Resource1, 300);
             Assert.AreEqual(r1Amount.Value, 400);
         }

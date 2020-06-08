@@ -9,13 +9,13 @@ namespace UI.Views.Items
     public class ResourceItemView : MonoBehaviour
     {
         [SerializeField]
-        private GameResourcesUiData _resourcesUiData;
+        private GameResourcesUiData _resourcesUiData = null;
         [SerializeField]
-        private Image _icon;
+        private Image _icon = null;
         [SerializeField]
-        private Text _label;
+        private Text _label = null;
         [SerializeField]
-        private StupidProgressBar _fillRate;
+        private StupidProgressBar _fillRate = null;
 
         private int? _limit;
         private int _amount;
@@ -40,14 +40,14 @@ namespace UI.Views.Items
             if (_limit.HasValue)
             {
                 rate = (float)_amount / _limit.Value;
-                _fillRate.SetValue(rate);
+                _fillRate?.SetValue(rate);
                 _label.text = $"{_amount}/{_limit.Value}";
             }
             else
             {
                 _label.text = $"{_amount}";
             }
-            _fillRate.SetVisible(_limit.HasValue);
+            _fillRate?.SetVisible(_limit.HasValue);
         }
     }
 }
