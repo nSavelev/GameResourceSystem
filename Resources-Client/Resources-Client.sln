@@ -1,14 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameResources", "GameResources.csproj", "{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "UniRx.csproj", "{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameData", "GameData.csproj", "{93C934DE-59D1-9D93-86CF-D716EA64F8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditMoteTests", "EditMoteTests.csproj", "{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C934DE-59D1-9D93-86CF-D716EA64F8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C934DE-59D1-9D93-86CF-D716EA64F8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C934DE-59D1-9D93-86CF-D716EA64F8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C934DE-59D1-9D93-86CF-D716EA64F8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
