@@ -4,3 +4,7 @@ Resources-Client/Library/
 Resources-Client/Logs/
 
 Resources-Client/Temp/
+
+Resources-Client/obj/
+
+Resources-Client/.idea/
