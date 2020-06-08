@@ -12,10 +12,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D7E53765-DF39-7D62-7A14-6A1CA663B0BA}</ProjectGuid>
+    <ProjectGuid>{57141015-E2A7-DEE6-5677-9DF0B53D947F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Network</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -58,33 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\TempLogic\TempNetwork.cs" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     <Compile Include="Assets\Scripts\Network\INetMessage.cs" />
+     <Compile Include="Assets\Scripts\Network\INetMessageBus.cs" />
+     <None Include="Assets\Scripts\Network\Network.asmdef" />
+ <Reference Include="UnityEditor.UI">
+ <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>B:/Projects/Temp/GameResourceSystem/Resources-Client/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -262,6 +243,24 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -608,32 +607,6 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="UniRx.csproj">
-      <Project>{CFEC1DEA-5829-5ED7-54B2-FF2381D3D817}</Project>
-      <Name>UniRx</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameResources.csproj">
-      <Project>{3E1BD603-B27D-0438-A38E-9EA7D9C05F6C}</Project>
-      <Name>GameResources</Name>
-    </ProjectReference>
-    <ProjectReference Include="EditMoteTests.csproj">
-      <Project>{D5ADBFAA-0384-E843-F3E5-BD7FE0E6AF20}</Project>
-      <Name>EditMoteTests</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameData.csproj">
-      <Project>{93C934DE-59D1-9D93-86CF-D716EA64F8A7}</Project>
-      <Name>GameData</Name>
-    </ProjectReference>
-    <ProjectReference Include="Network.csproj">
-      <Project>{57141015-E2A7-DEE6-5677-9DF0B53D947F}</Project>
-      <Name>Network</Name>
-    </ProjectReference>
-    <ProjectReference Include="Protocol.csproj">
-      <Project>{6A3CD2C1-3C78-4DF8-22EA-06F2AFF3E4B2}</Project>
-      <Name>Protocol</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
