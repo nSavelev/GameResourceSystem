@@ -1,14 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{632D3F97-02D7-7923-8C63-73BCCC514B4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "UniRx.csproj", "{33FE3C36-4511-B423-F87D-3D736791DD33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{632D3F97-02D7-7923-8C63-73BCCC514B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632D3F97-02D7-7923-8C63-73BCCC514B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632D3F97-02D7-7923-8C63-73BCCC514B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632D3F97-02D7-7923-8C63-73BCCC514B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FE3C36-4511-B423-F87D-3D736791DD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FE3C36-4511-B423-F87D-3D736791DD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FE3C36-4511-B423-F87D-3D736791DD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FE3C36-4511-B423-F87D-3D736791DD33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
